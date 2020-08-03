@@ -1,0 +1,40 @@
+# Plot parameter file
+
+[gen]
+# general parameters
+title     | "Plot Title"
+fsize     | 14    6
+
+[img]
+# parameters dictating the imshow properties
+vmin      | -0.05
+vmax      | 0.15
+cmap      | Greys
+
+[wcs]
+# wcs parameters to map
+crpix     | 450   200
+cdelt     | 1/60. 1/60.
+crval     | 26.   0.
+ctype     | GLON-TAN  GLAT-TAN
+
+[overlay]
+# galactic grid colour and galactic plane colour, set to none if not required
+galgrid   | gray
+galplane  | orange
+
+[cat]
+# catalogues to plot on figure
+
+{example}
+name      | "name for legend"
+fname     | "/path/to/catalogue.extension"
+ptype     | circle or scatter
+# column names indexed from 0...
+glat      | 3
+glon      | 2
+rad       | 4
+# given in degrees (1 = degree, 1/60 = arcmin, 1/3600 = arcsec)
+rad_unit  | 1/3600
+# colour of plot
+c         | red
